@@ -51,6 +51,7 @@ class UI(QWidget):
         self.load_table()
 
     def load_table(self):
+        self.date_box.setDate(QDate.currentDate())
         self.table.setRowCount(0)
 
         query = QSqlQuery("SELECT * FROM expenses")
